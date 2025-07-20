@@ -10,7 +10,7 @@ const {
   createBookingEntry,
   bookMultipleRoomsIfAvailable,
 } = require("../controller/bookingcontroller");
-const { authMiddleware } = require("../middleware/authMiddleware");
+const { authMiddleware } = require("../middleware/AuthMiddleware");
 
 // Souvenirs
 const {

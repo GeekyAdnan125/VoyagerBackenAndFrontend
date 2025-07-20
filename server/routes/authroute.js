@@ -3,7 +3,7 @@ const { registerUser, loginUser, getUserProfile, logoutUser } = require("../cont
 const { getUserReview, createReview } = require("../controller/reviewController");
 const { uploadavater } = require("../controller/handleuploadavater");
 const { createCommunityPost } = require("../controller/communityController");
-const { authMiddleware, authorizeRoles } = require("../middleware/authMiddleware");
+const { authMiddleware, authorizeRoles } = require("../middleware/AuthMiddleware");
 
 const authroutes = express.Router();
 
