@@ -3,7 +3,7 @@ const ownerHotelRoutes = express.Router();
 const {
   authMiddleware,
   authorizeRoles,
-} = require("../middleware/authMiddleware"); 
+} = require("../middleware/AuthMiddleware"); 
 const {
   createHotel,
   getAllHotels,

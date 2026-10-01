@@ -1,9 +1,5 @@
 # Node modules
 node_modules/
-
-
-
-
 # Logs
 *.log
 logs/
@@ -20,3 +16,5 @@ Thumbs.db
 # IDE configs
 .vscode/
 .idea/
+
+.env

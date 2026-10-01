@@ -9,7 +9,7 @@ export const getWhatsappLinkWithTracking = (phone, userId, lat = null, lng = nul
     }
 
     // Base tracking URL
-    const trackingUrl = `http://localhost:5173/track/${userId}`;
+    const trackingUrl = `https://voyagerserver.onrender.com/track/${userId}`;
     
     // Build message
     let message = `🚨 EMERGENCY! I need help!\n\n`;

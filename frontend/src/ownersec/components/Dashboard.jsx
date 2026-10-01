@@ -37,13 +37,13 @@ export default function Dashboard({ onNavigate }) {
       if (!selectedHotel?.id) return;
       try {
         // Fetch hotel info
-        const hotelRes = await fetch("http://localhost:5000/api/owner/hotel/all", { credentials: "include" });
+        const hotelRes = await fetch("https://voyagerserver.onrender.com/api/owner/hotel/all", { credentials: "include" });
         const hotels = await hotelRes.json();
         const hotel = hotels.find(h => h._id === selectedHotel.id);
         setHotelData(hotel);
         console.log("[Dashboard] Filtered hotel info:", hotel);
         // Fetch rooms
-        const roomsRes = await fetch(`http://localhost:5000/api/owner/hotel/rooms/${selectedHotel.id}`, { credentials: "include" });
+        const roomsRes = await fetch(`https://voyagerserver.onrender.com/api/owner/hotel/rooms/${selectedHotel.id}`, { credentials: "include" });
         const roomsData = await roomsRes.json();
         setRooms(roomsData);
         console.log("[Dashboard] Rooms fetched:", roomsData);

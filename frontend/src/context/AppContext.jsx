@@ -20,7 +20,6 @@ export const AppContextProvider = ({ children }) => {
   const [HotelLocation, setHotelLocation] = useState("");
 
 
-  
 
   // Selected hotel for global access
   const [selectedHotel, setSelectedHotel] = useState(null);

@@ -1,11 +1,11 @@
 const Hotel = require('../models/HotelSchema');
 const Razorpay = require('razorpay');
 const crypto = require("crypto");
-
-const instance = new Razorpay({  
-    key_id: "rzp_test_wb29ohYja8YQoG",
-    key_secret: "0BlelHv2GYnSWQRtR2fqDd63"
-}); 
+require('dotenv').config();
+const instance = new Razorpay({
+    key_id: process.env.RAZORPAY_KEY_ID,
+    key_secret: process.env.RAZORPAY_KEY_SECRET,
+});
 
 // Get hotel by name
 const getHotelByName = async (req, res) => { 

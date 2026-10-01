@@ -37,7 +37,7 @@ function Login() {
     try {
       setLoading(true);
       const response = await axios.post(
-        "http://localhost:5000/api/users/login",
+        "https://voyagerserver.onrender.com/api/users/login",
         loginInfo,
         {
           headers: { "Content-Type": "application/json" },

@@ -25,7 +25,7 @@ export default function BookingsPage() {
       if (!selectedHotel?.id) return;
 
       try {
-        const res = await fetch(`http://localhost:5000/api/owner/hotel/rooms/${selectedHotel.id}`, {
+        const res = await fetch(`https://voyagerserver.onrender.com/api/owner/hotel/rooms/${selectedHotel.id}`, {
           credentials: "include",
         });
         const data = await res.json();
@@ -42,7 +42,7 @@ export default function BookingsPage() {
   useEffect(() => {
     const fetchHotels = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/owner/hotel/all", { credentials: "include" });
+        const res = await fetch("https://voyagerserver.onrender.com/api/owner/hotel/all", { credentials: "include" });
         const data = await res.json();
         setHotels(data);
       } catch (err) {

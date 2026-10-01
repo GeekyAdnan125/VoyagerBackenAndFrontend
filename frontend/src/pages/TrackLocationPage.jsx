@@ -60,7 +60,7 @@ const TrackLocationPage = () => {
   // Fetch location data
   const fetchLocation = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/location/${userId}`);
+      const response = await fetch(`https://voyagerserver.onrender.com/api/location/${userId}`);
       if (!response.ok) {
         if (response.status === 404) {
           setError('Location tracking not found or has expired');

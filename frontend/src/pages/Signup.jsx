@@ -32,7 +32,7 @@ function Signup() {
 
     try {
       setLoading(true);
-      await axios.post("http://localhost:5000/api/users/register", signupInfo, {
+      await axios.post("https://voyagerserver.onrender.com/api/users/register", signupInfo, {
         headers: { "Content-Type": "application/json" },
       });
       toast.success("Signup successful! Redirecting to login...");

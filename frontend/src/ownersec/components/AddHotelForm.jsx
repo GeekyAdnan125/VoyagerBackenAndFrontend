@@ -533,7 +533,7 @@ export default function AddHotelForm({ onClose }) {
       // ✅ AUTHENTICATION: Using withCredentials for cookie-based auth
       // First create the hotel
       const hotelResponse = await axios.post(
-        `http://localhost:5000/api/owner/hotel/create`,
+        `https://voyagerserver.onrender.com/api/owner/hotel/create`,
         submissionData,
         { withCredentials: true }
       );
@@ -552,7 +552,7 @@ export default function AddHotelForm({ onClose }) {
       for (const roomType of roomTypes) {
         if (roomType.count > 0) {
           await axios.post(
-            `http://localhost:5000/api/owner/hotel/rooms/bulkCreate`,
+            `https://voyagerserver.onrender.com/api/owner/hotel/rooms/bulkCreate`,
             {
               number_of_rooms: roomType.count,
               room_type: roomType.type,

@@ -16,7 +16,7 @@ const useLiveLocation = (userId) => {
 
   const sendLocationToBackend = async (latitude, longitude) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/location/${userId}`, {
+      const response = await fetch(`https://voyagerserver.onrender.com/api/location/${userId}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

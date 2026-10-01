@@ -22,7 +22,7 @@ export default function App() {
         setError(null)
         console.log("Fetching souvenirs from API...")
         
-        const response = await fetch("http://localhost:5000/api/souvenirs/getallsouviners")
+        const response = await fetch("https://voyagerserver.onrender.com/api/souvenirs/getallsouviners")
         console.log("API response:", response)
         
         if (!response.ok) {

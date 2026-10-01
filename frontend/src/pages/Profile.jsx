@@ -72,7 +72,7 @@ const Profile = ({ isOpen, onClose }) => {
       formData.append("avatar", image);
 
       const { data } = await axios.post(
-        "http://localhost:5000/api/users/avater",
+        "https://voyagerserver.onrender.com/api/users/avater",
         formData,
         {
           headers: {

@@ -20,12 +20,12 @@ export default function RoomsPage() {
     const fetchData = async () => {
       if (!selectedHotel?.id) return;
       try {
-        const hotelRes = await fetch("http://localhost:5000/api/owner/hotel/all", { credentials: "include" })
+        const hotelRes = await fetch("https://voyagerserver.onrender.com/api/owner/hotel/all", { credentials: "include" })
         const hotels = await hotelRes.json()
         const hotel = hotels.find(h => h._id === selectedHotel.id)
         setHotelData(hotel)
 
-        const roomsRes = await fetch(`http://localhost:5000/api/owner/hotel/rooms/${selectedHotel.id}`, { credentials: "include" })
+        const roomsRes = await fetch(`https://voyagerserver.onrender.com/api/owner/hotel/rooms/${selectedHotel.id}`, { credentials: "include" })
         const roomsData = await roomsRes.json()
         setRooms(roomsData)
       } catch (err) {

@@ -55,7 +55,7 @@ export default function Header({ hotelOwner, currentPage, onNavigate }) {
         headers["Authorization"] = `Bearer ${user.token}`
       }
       const response = await fetch(
-        `http://localhost:5000/api/owner/hotel/by-email/${encodeURIComponent(email)}`,
+        `https://voyagerserver.onrender.com/api/owner/hotel/by-email/${encodeURIComponent(email)}`,
         {
           method: "GET",
           headers,
@@ -110,7 +110,7 @@ export default function Header({ hotelOwner, currentPage, onNavigate }) {
     }
     try {
       setIsLoading(true)
-      await axios.get("http://localhost:5000/api/users/logout", {
+      await axios.get("https://voyagerserver.onrender.com/api/users/logout", {
         withCredentials: true,
       })
       localStorage.clear()

@@ -202,7 +202,7 @@ export default function HotelBooking() {
       }
 
       const response = await fetch(
-        "http://localhost:5000/api/owner/hotel/all",
+        "https://voyagerserver.onrender.com/api/owner/hotel/all",
         {
           method: "GET",
           headers: headers,
@@ -297,7 +297,7 @@ export default function HotelBooking() {
       }
 
       const response = await fetch(
-        "http://localhost:5000/api/bookings/available-hotels",
+        "https://voyagerserver.onrender.com/api/bookings/available-hotels",
         {
           method: "POST",
           headers: headers,
@@ -516,7 +516,7 @@ export default function HotelBooking() {
       console.log("📝 Booking request body:", requestBody);
 
       const response = await fetch(
-        "http://localhost:5000/api/bookings/book-multiple-rooms",
+        "https://voyagerserver.onrender.com/api/bookings/book-multiple-rooms",
         {
           method: "POST",
           headers: {
@@ -778,7 +778,7 @@ export default function HotelBooking() {
       if (token) headers["Authorization"] = `Bearer ${token}`;
   
       const response = await fetch(
-        "http://localhost:5000/api/bookings/available-hotels",
+        "http://:5000/api/bookings/available-hotels",
         {
           method: "POST",
           headers,
@@ -845,7 +845,7 @@ export default function HotelBooking() {
     };
 
     try {
-      const res = await fetch("http://localhost:5000/api/orders/create-order", {
+      const res = await fetch("https://voyagerserver.onrender.com/api/orders/create-order", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
@@ -937,7 +937,7 @@ export default function HotelBooking() {
       console.log("📧 Frontend: Prepared booking details:", bookingDetails);
 
       const response = await fetch(
-        "http://localhost:5000/api/bookings/send-receipt",
+        "https://voyagerserver.onrender.com/api/bookings/send-receipt",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
